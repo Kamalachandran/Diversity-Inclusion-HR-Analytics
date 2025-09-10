@@ -118,9 +118,3 @@ Developed interactive dashboards to visualize:
 ## 🙌 Acknowledgements
 Special thanks to open-source tools and libraries:  
 **Pandas, Matplotlib, Seaborn, SQL, Power BI**.  
-
----
-
-## 📧 Contact
-For questions or collaboration:  
-**Your Name** – [your.email@example.com]  
