@@ -1,6 +1,6 @@
-create database diversity_inclusion;
+create database HR_DI;
 
-use diversity_inclusion;
+use HR_DI;
 
 CREATE TABLE promotion (
     Employee_ID INT NOT NULL PRIMARY KEY,
@@ -36,6 +36,8 @@ CREATE TABLE promotion (
     Years_since_last_hire INT,
     Rand DOUBLE
 );
+
+select * from Promotion limit 5;
 
 
 -- 1.retrieve all employee who are from germany
@@ -103,7 +105,7 @@ SELECT
 FROM
     promotion
 GROUP BY Region_group_nationality_1
-ORDER BY COUNT(*) DESC;
+ORDER BY COUNT(Employee_ID) DESC;
 
 -- 8.calculate average years since last hire by region
 
@@ -139,3 +141,12 @@ FROM
 WHERE
     FY20_leaver = 'Yes'
         AND FY20_Performance_Rating > 3;
+        
+-- 11. Retrieve the number of employees categorized by their performance rating for the year 2020.
+
+SELECT 
+    FY20_Performance_Rating, COUNT(Employee_ID) AS Employee
+FROM
+    promotion
+GROUP BY FY20_Performance_Rating
+ORDER BY FY20_Performance_Rating;
